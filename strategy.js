@@ -18,20 +18,13 @@ const appleSignin = require('apple-signin');
  *
  * Options:
  *   - `clientID`           identifier of Apple Service ID
- *   - `callbackURL`        URL to which Apple will redirect the user after granting authorization
- *   - `teamId`             apple Developer Team ID.
- *   - `keyIdentifier`      identifier of private Apple key associated with clientID
- *   - `privateKeyPath`     path to private Apple key associated with clientID
- *   - `scope`              (optional) array of permission scopes to request.  valid scopes include:
+ *
+ * NOTE: accessToken,refreshToken allway undefined
  *
  * Examples:
  *
  *     passport.use(new AppleStrategy({
  *         clientID: '123-456-789',
- *         callbackURL: 'https://www.example.net/auth/apple/callback',
- *         teamId: "123456AB",
- *         keyIdentifier: 'RB1233456',
- *         privateKeyPath: path.join(__dirname, "./AuthKey_RB1233456.p8")
  *       },
  *       function(accessToken, refreshToken, profile, done) {
  *         User.findOrCreate(..., function (err, user) {
