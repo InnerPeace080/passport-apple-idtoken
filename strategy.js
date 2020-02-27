@@ -79,6 +79,7 @@ AppleIdTokenStrategy.prototype.authenticate = function(req, options) {
   appleSignin.verifyIdToken(idToken, options.clientID)
     .then((jwtClaims) => {
       const profile = {};
+      profile.provider = 'apple';
       profile.id = jwtClaims.sub;
 
       if (self._passReqToCallback) {
