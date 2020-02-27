@@ -80,6 +80,7 @@ AppleIdTokenStrategy.prototype.authenticate = function(req, options) {
     .then((jwtClaims) => {
       const profile = jwtClaims;
       profile.provider = 'apple';
+      profile._raw = idToken;
       profile.id = jwtClaims.sub;
 
       if (self._passReqToCallback) {
