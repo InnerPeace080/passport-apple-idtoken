@@ -70,7 +70,7 @@ AppleIdTokenStrategy.prototype.authenticate = function(req, options) {
   if (!req.body) {
     return this.fail();
   }
-  var idToken = req.body[options.tokenField||'access_token'] || req.query[options.tokenField||'access_token'] || req.headers[options.tokenField||'access_token'];
+  var idToken = req.body[options.tokenField||'idToken'] || req.query[options.tokenField||'idToken'] || req.headers[options.tokenField||'idToken'];
   function verified(err, user, info) {
     if (err) { return self.error(err); }
     if (!user) { return self.fail(info); }
