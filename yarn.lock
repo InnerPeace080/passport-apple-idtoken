@@ -12,10 +12,18 @@ ajv@^6.5.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-apple-signin@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/apple-signin/-/apple-signin-1.0.9.tgz#d762db25a25529fa52eec6281d73edd441f3958d"
-  integrity sha512-QcG8uj7r9VE9MQzQqDsdvhY93f8tChmO+xsaYaNmwVMbf9Nt/TCOwELDDORsW4ZRqQQoCEoyXyw2YofROCpd3Q==
+"apple-signin@git+https://github.com/InnerPeace080/node-apple-signin.git#1.0.12":
+  version "1.0.12"
+  resolved "git+https://github.com/InnerPeace080/node-apple-signin.git#60d6056c512c06a3ae475f05b6f906a99726a59e"
+  dependencies:
+    jsonwebtoken "^8.5.1"
+    node-rsa "^1.0.5"
+    request "^2.88.0"
+    request-promise-native "^1.0.7"
+
+"apple-signin@git+https://github.com/InnerPeace080/node-apple-signin.git#1.0.13":
+  version "1.0.13"
+  resolved "git+https://github.com/InnerPeace080/node-apple-signin.git#a78639edf51ded289a5c53b74ecaf744f46fcb54"
   dependencies:
     jsonwebtoken "^8.5.1"
     node-rsa "^1.0.5"
